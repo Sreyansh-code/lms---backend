@@ -15,6 +15,9 @@ app.use(cors());
 app.use("/api/users", userRouter);
 
 // connect DB before handling requests
-await dbConnect();
+// connect DB before handling requests (start connection asynchronously)
+dbConnect()
+	.then(() => console.log("DB connected"))
+	.catch((err) => console.error("DB connection error:", err));
 
 export default app;
