@@ -2,8 +2,8 @@ import dotenv from "dotenv";
 dotenv.config();
 
 import express from "express";
-import dbConnect from "../config/db.js";
-import userRouter from "../routers/userRoute.js";
+import dbConnect from "./config/db.js";
+import userRouter from "./routers/userRoute.js";
 import cors from "cors";
 
 
